@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+        {% if result == 'correct': %}
+            <div class="form-group correct"> 
+                <p> {{ guess_result }} </p>
+                <a href="/">Play Again!</a>
+            </div>
+        {% endif %}
+        {% if result == 'incorrect': %}
+            <div class="form-group incorrect"> {{ guess_result }} </div>
+        {% endif %}
+        <form action="/guess_number" method="POST">
+            <div class="form-group">
+                <input type="text" name="givenValue">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+{% endblock %}

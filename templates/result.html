@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <form action="/" method="GET">
+        <div class="form-group correct">
+            <P> {{ guess_result }} </P>
+            <input type="submit" class="btn btn-primary" value="Play Again">
+        </div>
+    </form>
+{% endblock %}
